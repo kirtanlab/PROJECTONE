@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    
     <link rel="stylesheet" href="assets/CSS/general.css" />
     <link rel="stylesheet" href="assets/CSS/style.css" />
     <title>Faculty Profile</title>
@@ -101,8 +101,7 @@
         
                  <div class="timeline-wrap">
                   
-                  
-
+            
                    <div class="timeline-block">
                     
                      <div class="timeline-ico">
@@ -149,18 +148,41 @@
             
           </section> <!-- /features -->
 
-
-
           <!-- /TEST -->
 
-
-
         </div>
+
+        
+        <!-- Co-author List -->
+
         <div id="content-co-author" class="tabcontent">
-          <p>
-            lol
-          </p>
+
+          <!-- <pre id="output"></pre> -->
+          
+          <div class="boxed-director">
+            <section class="profile-director">
+              <div class="container grid grid-cols-2 grid-profile">
+                <div class="img-box">
+                  <img src="assets/IMG/user-img.png" class="f-img" alt="passport size faculty image" />
+                </div>
+                <div class="text-box">
+                  <h2 class="secondary-heading f-name"  id="coname"></h2>
+                  <p class="f-email">
+                    <a class="email-link" href="mailto:hello@example.com">hello@example.com</a>
+                  </p>
+                  <p class="dblp">
+                    <a class="dblp-link" href="#">view profile</a>
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        
+
+
         </div>
+
+
         <div id="content-wordcloud" class="tabcontent">
           <p>
             loltwo
@@ -169,5 +191,37 @@
       </section>
     
     <script src="assets/JS/script.js"></script>
+    <!--<script>
+      document.addEventListener("DOMContentLoaded", () => {
+      //fetch the data as soon as the page has loaded
+      let url = "https://dblp.uni-trier.de/pid/131/1057.xml";
+      fetch(url)
+      .then((response) => response.text())
+      .then((data) => {
+          //console.log(data); //string
+          let parser = new DOMParser();
+          let xml = parser.parseFromString(data, "application/xml");
+          //document.getElementById("output").textContent = data;
+          console.log(xml);
+          //coauthorlist(xml);
+          //pubtexts(xml);
+        });
+      })
+
+
+      function coauthorlist(x) {
+        let list = document.getElementById("coauthors");
+        let coauthors = x.getElementsByTagName("na");
+        for (let i = 0; i < coauthors.length; i++) { 
+          let li=document.getElementById("coname"); 
+          let coauthor=coauthors[i].firstChild.nodeValue; 
+          li.textContent=coauthor; 
+          list.appendChild(li); 
+        } 
+    }
+    </script>-->
+
+    <script type="module" src="./hlr.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
   </body>
 </html>
