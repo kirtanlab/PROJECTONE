@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +13,8 @@
     <title>Faculty Profile</title>
   </head>
   <body>
-
     <!-- Header -->
-    <header class="header">
-      
+    <header class="header sticky">
       <!-- LOGO -->
       <a href="#">
         <img class="logo" alt="IIT Ropar logo" src="assets/IMG/logo.png" />
@@ -22,7 +23,6 @@
       <!-- NAV_BAR CONTENTS-->
       <nav class="main-nav">
         <ul class="main-nav-list">
-
           <!--
           <li><a class="main-nav-link" href="#">Section 1</a></li>
           <li>
@@ -30,7 +30,9 @@
           </li>
           <li><a class="main-nav-link" href="#">Section 3</a></li>-->
 
-          <li><a class="main-nav-link nav-signin" href="#">Director Login</a></li>
+          <li>
+            <a class="main-nav-link nav-signin" href="#">Director Login</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -38,136 +40,147 @@
     <!-- PROFILE BAR -->
     <main>
       <div class="boxed-faculty">
-      <section class="profile">
-        <div class="container grid grid-cols-2 grid-profile">
-          <div class="img-box">
-            <img
-              src="assets/IMG/user-img.png"
-              class="f-img"
-              alt="passport size faculty image"
-            />
+        <section class="profile">
+          <div class="container grid grid-cols-2 grid-profile">
+            <div class="img-box">
+              <img
+                src="assets/IMG/user-img.png"
+                class="f-img"
+                alt="passport size faculty image"
+              />
+            </div>
+            <div class="text-box">
+              <h2 class="secondary-heading f-name">John Smith</h2>
+              <p class="f-email">
+                <a class="email-link" href="mailto:hello@example.com"
+                  >hello@example.com</a
+                >
+              </p>
+              <p class="dblp">
+                <a class="dblp-link" href="#">view profile</a>
+              </p>
+            </div>
           </div>
-          <div class="text-box">
-            <h2 class="secondary-heading f-name">John Smith</h2>
-            <p class="f-email">
-              <a class="email-link" href="mailto:hello@example.com"
-                >hello@example.com</a
-              >
-            </p>
-            <p class="dblp">
-              <a class="dblp-link" href="#">view profile</a>
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
     </main>
-      <!-- PROFILE DETAILS-->
+    <!-- PROFILE DETAILS-->
 
-      <section class="heading-tabs">
-        <div class="tab">
+    <section class="heading-tabs">
+      <div class="tab">
         <div class="container grid grid-cols-3 tabs-grid">
-
           <!-- PUBLICATION-->
-          
-            <button class="heading-name" onClick="opentab(event,'content-publication')">Publications</button>
-          
+
+          <button
+            class="heading-name"
+            onClick="opentab(event,'content-publication')"
+          >
+            Publications
+          </button>
 
           <!-- CO-AUTHOR -->
-          
-            <button class="heading-name" onClick="opentab(event,'content-co-author')">Co-author network</button>
-          
+
+          <button
+            class="heading-name"
+            onClick="opentab(event,'content-co-author')"
+          >
+            Co-author network
+          </button>
 
           <!-- WORDCLOUD -->
-          
-            <button class="heading-name" onClick="opentab(event,'content-wordcloud')">Wordcloud</button>
-          
+
+          <button
+            class="heading-name"
+            onClick="opentab(event,'content-wordcloud')"
+          >
+            Wordcloud
+          </button>
         </div>
       </div>
-        <hr style="width:1450px;height:3px;padding-left: 0px;color:brown;background-color: black;">
+      <hr
+        style="
+          width: 100%;
+          height: 3px;
+          padding-left: 0px;
+          color: brown;
+          background-color: black;
+        "
+      />
 
-        <div id="content-publication" class="tabcontent">
-          
-        
-          <!-- PUBLICATION-->
+      <div id="content-publication" class="tabcontent">
+        <!-- PUBLICATION-->
 
-          <section id="resume" class="grey-section">
-            <div class="num-pub">
-              <p>Number of Publication: 1</p>
-            </div>
-             <div class="row resume-timeline">
-      
-               <div class="col-twelve">
-        
-                 <div class="timeline-wrap">
-                  
-                  
+        <section id="resume" class="grey-section">
+          <div class="num-pub">
+            <p>Number of Publication: 1</p>
+          </div>
+          <div class="row resume-timeline">
+            <div class="col-twelve">
+              <div class="timeline-wrap">
+                <div class="timeline-block">
+                  <div class="timeline-ico">
+                    <i class="fa fa-graduation-cap" style="font-size: 25px"></i>
+                  </div>
 
-                   <div class="timeline-block">
-                    
-                     <div class="timeline-ico">
-                       <i class="fa fa-graduation-cap" style="font-size:25px;"></i>
-                     </div>
-        
-                     <div class="timeline-header">
-                       <p>July 2015 - Present</p>
-                     </div>
-        
-                     <div class="timeline-content">
-                       <p>Awesome Studio</p>
-                       <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
-                     </div>
-        
-                  </div> <!-- /timeline-block -->
+                  <div class="timeline-header">
+                    <p class="timeline-name">July 2015 - Present</p>
+                  </div>
 
-                   <div class="other-timeline">
-                   <div class="timeline-block">
-        
-                     <div class="timeline-ico">
-                       <i class="fa fa-graduation-cap"></i>
-                     </div>
-        
-                     <div class="timeline-header">
-                       <h3>Front-end Developer</h3>
-                       <p>July 2014 - June 2015</p>
-                     </div>
+                  <div class="timeline-content">
+                    <p>Awesome Studio</p>
+                    <p>
+                      Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in
+                      magna consectetur nisi cupidatat laboris esse eiusmod
+                      deserunt aute do quis velit esse sed Ut proident cupidatat
+                      nulla esse cillum laborum occaecat nostrud sit dolor
+                      incididunt amet est occaecat nisi.
+                    </p>
+                  </div>
+                </div>
+                <!-- /timeline-block -->
+
+                <div class="other-timeline">
+                  <div class="timeline-block">
+                    <div class="timeline-ico">
+                      <i class="fa fa-graduation-cap"></i>
                     </div>
-                     <div class="timeline-content">
-                       <h4>Super Cool Agency</h4>
-                       <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-                     </div>
-        
-                   </div> <!-- /timeline-block -->
-        
-                   
-        
-                 </div> <!-- /timeline-wrap -->   			
-        
-               </div> <!-- /col-twelve -->
-               
-             </div> <!-- /resume-timeline -->
-            
-          </section> <!-- /features -->
 
+                    <div class="timeline-header">
+                      <h3>Front-end Developer</h3>
+                      <p>July 2014 - June 2015</p>
+                    </div>
+                  </div>
+                  <div class="timeline-content">
+                    <h4>Super Cool Agency</h4>
+                    <p>
+                      Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in
+                      magna consectetur nisi cupidatat laboris esse eiusmod
+                      deserunt aute do quis velit esse sed Ut proident cupidatat
+                      nulla esse cillum laborum occaecat nostrud sit dolor
+                      incididunt amet est occaecat nisi incididunt.
+                    </p>
+                  </div>
+                </div>
+                <!-- /timeline-block -->
+              </div>
+              <!-- /timeline-wrap -->
+            </div>
+            <!-- /col-twelve -->
+          </div>
+          <!-- /resume-timeline -->
+        </section>
+        <!-- /features -->
 
+        <!-- /TEST -->
+      </div>
+      <div id="content-co-author" class="tabcontent">
+        <p>lol</p>
+      </div>
+      <div id="content-wordcloud" class="tabcontent">
+        <p>loltwo</p>
+      </div>
+    </section>
 
-          <!-- /TEST -->
-
-
-
-        </div>
-        <div id="content-co-author" class="tabcontent">
-          <p>
-            lol
-          </p>
-        </div>
-        <div id="content-wordcloud" class="tabcontent">
-          <p>
-            loltwo
-          </p>
-        </div>
-      </section>
-    
     <script src="assets/JS/script.js"></script>
   </body>
 </html>

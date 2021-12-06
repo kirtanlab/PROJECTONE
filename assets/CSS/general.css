@@ -69,6 +69,7 @@ Medium:
 }
 html {
   font-size: 62.5%;
+  behavior: smooth;
 }
 body {
   font-family: "Lato", sans-serif;
