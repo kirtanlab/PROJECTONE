@@ -12,38 +12,47 @@
   padding: 0 4.8rem;
   position: relative;
 }
-
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(197, 203, 233, 0.98);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
 /**LOGO **/
 .logo {
   height: 8.6rem;
 }
 
 /*PROFILE BAR*/
-.boxed{
+.boxed {
   border: 1px solid rgb(0, 0, 0);
   width: 1370px;
   display: none;
 }
 
-.boxed-res{
+.boxed-res {
   border: 1px solid rgb(0, 0, 0);
   width: 1370px;
   display: none;
 }
 
-.boxed-director{
+.boxed-director {
   border: 1px solid rgb(0, 0, 0);
   width: 1400px;
   display: block;
 }
 
-
-
-.boxed-faculty{
+.boxed-faculty {
   border: 1px solid rgb(0, 0, 0);
-  width: 1600px;
+  width: 1550px;
+  margin-top: 9.6rem;
 }
-
 
 /**************************/
 /* NAVIGATION */
@@ -144,6 +153,7 @@
 }
 
 .profile {
+  /* max-width: 50%; */
   margin-top: 9.6rem;
   margin-bottom: 9.6rem;
 }
@@ -191,24 +201,35 @@ p {
 
 /* publication-author-word-cloud section */
 .heading-tabs {
-  max-width: 160rem;
+  max-width: 100%;
   margin: 0 auto;
   margin-bottom: 9.6rem;
-  background-color: #d6d6d6;
+  background-color: #d9dcf0;
   padding: 1.6rem 3.2rem;
 }
 .tabs-grid {
   align-items: center;
   justify-content: space-around;
-  gap: 55rem;
+  gap: 30rem;
   text-align: center;
   margin-bottom: 1.8rem;
 }
 
 .heading-name {
-  font-size: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
   font-weight: 700;
   cursor: pointer;
+  padding: 1.5rem 4rem;
+  text-decoration: none;
+  background-color: #303f9f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.heading-name:hover {
+  background-color: #3f51b5;
 }
 .content-text {
   font-size: 1.6rem;
@@ -216,9 +237,15 @@ p {
 .hidden {
   display: none;
 }
-
-
-
+/* publications */
+.num-pub p {
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+}
+.timeline-name {
+  font-size: 1.6rem;
+}
 /*TEST*/
 
 /** 
@@ -227,109 +254,114 @@ p {
  *
  * ------------------------------------------------------------------- 
  */
- #resume {
-	padding-top: 12rem;
-	padding-bottom: 12rem;
+#resume {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 }
 
-#resume .num-pub{
+#resume .num-pub {
   font-size: 4rem;
   margin-left: 40px;
   margin-bottom: 100px;
 }
 
 #resume .resume-header {
-	text-align: center;
+  text-align: center;
 }
 #resume .resume-header h2 {
-	color: #FF0077;
+  color: #ff0077;
 }
 
 #resume .resume-timeline {
-	max-width: 980px;
+  max-width: 980px;
 }
 #resume .timeline-wrap {
-	position: relative;
-	margin-top: 1.5rem;
-	margin-bottom: 6rem;
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 6rem;
 }
 #resume .timeline-wrap::before {
-	content: "";
-	display: block;
-	width: 1px;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.1);
-	position: absolute;
-	left: 35%;
-	top: 0;
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 35%;
+  top: 0;
 }
 #resume .timeline-block {
-	position: relative;
-	padding-top: 1.5rem;
+  position: relative;
+  padding-top: 1.5rem;
 }
 #resume .timeline-ico {
-	height: 4.8rem;
-	width: 4.8rem;
-	line-height: 4.8rem;
-	background: #df0000;
-	border-radius: 50%;
-	text-align: center;
-	color: #FFFFFF;
-	position: absolute;
-	left: 35%;
-	top: .9rem;
-	margin-left: -2.4rem;
+  height: 4.8rem;
+  width: 4.8rem;
+  line-height: 4.8rem;
+  background: #df0000;
+  border-radius: 50%;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  left: 35%;
+  top: 0.9rem;
+  margin-left: -2.4rem;
 }
 #resume .timeline-ico i {
-	position: relative;
-	left: .05rem;
-	top: .2rem;
+  position: relative;
+  left: 0.05rem;
+  top: 0.2rem;
 }
 
 #resume .timeline-header {
-	float: left;
-	width: 35%;
-	padding-right: 90px;
-	text-align: right;
+  float: left;
+  width: 35%;
+  padding-right: 90px;
+  text-align: right;
   font-size: larger;
 }
 #resume .timeline-header h3 {
-	margin-bottom: 0;
-  
+  margin-bottom: 0;
 }
 #resume .timeline-header p {
-	font-family: "poppins-regular", sans-serif;
-	font-size: 2.5rem;
-	color: #020101;
+  font-family: "poppins-regular", sans-serif;
+  font-size: 1.8rem;
+  color: #020101;
+  font-weight: 300;
 }
 #resume .timeline-content {
-	margin-left: 35%;
-	padding-left: 60px;
+  margin-left: 35%;
+  padding-left: 60px;
 }
 #resume .timeline-content p {
-	font-family: "poppins-regular", sans-serif;
-	font-size: 2.5rem;
-	color: #020101;
+  font-family: "poppins-regular", sans-serif;
+  font-size: 1.8rem;
+  color: #020101;
+  line-height: 1.3;
+}
+#resume .timeline-content p:first-child {
+  font-weight: 400;
 }
 #resume .timeline-content h4 {
-	position: relative;
-	padding-bottom: 1.8rem;
+  position: relative;
+  padding-bottom: 1.8rem;
 }
 #resume .timeline-content h4::after {
-	content: "";
-	display: block;
-	height: 3px;
-	width: 50px;
-	background: rgba(0, 0, 0, 0.2);
-	position: absolute;
-	left: 0;
-	bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 #resume .other-timeline {
   display: none;
 }
 
-#content-co-author,#content-wordcloud{
+#content-co-author,
+#content-wordcloud {
   display: none;
 }
