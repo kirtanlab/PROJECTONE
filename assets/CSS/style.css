@@ -333,3 +333,7 @@ p {
 #content-co-author,#content-wordcloud{
   display: none;
 }
+
+#inpro_pub{
+  display:none;
+}
